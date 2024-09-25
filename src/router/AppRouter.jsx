@@ -5,7 +5,6 @@ import OfflineNerwork from "../components/errors/OfflineNerwork";
 // layouts
 import WebsiteLayout from "../layouts/website/WebsiteLayout";
 // common components
-import Meta from "../components/common/seo/Meta";
 import useNetworkStatus from "../hooks/network/useNetworkStatus";
 // pages
 import Home from "../pages/home/Home";
