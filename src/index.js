@@ -6,5 +6,12 @@ import "./style/index.css";
 import AppRouter from "./router/AppRouter";
 // i18n
 import "./i18n/i18n";
+// react query
+import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
+const queryClient = new QueryClient();
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppRouter />);
+root.render(
+  <QueryClientProvider client={queryClient}>
+    <AppRouter />
+  </QueryClientProvider>
+);
