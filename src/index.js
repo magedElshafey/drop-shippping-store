@@ -4,8 +4,9 @@ import ReactDOM from "react-dom/client";
 import "./style/index.css";
 // routes
 import AppRouter from "./router/AppRouter";
-// i18n
+// i18n and languages
 import "./i18n/i18n";
+import HandleLanguages from "./components/common/app/HandleLanguages";
 // react query
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 // redux
@@ -17,6 +18,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <QueryClientProvider client={queryClient}>
     <Provider store={store}>
+      <HandleLanguages />
       <AppRouter />
     </Provider>
   </QueryClientProvider>
