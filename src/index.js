@@ -8,10 +8,16 @@ import AppRouter from "./router/AppRouter";
 import "./i18n/i18n";
 // react query
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
+// redux
+import { Provider } from "react-redux";
+import store from "./store/store";
+// query client
 const queryClient = new QueryClient();
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <QueryClientProvider client={queryClient}>
-    <AppRouter />
+    <Provider store={store}>
+      <AppRouter />
+    </Provider>
   </QueryClientProvider>
 );
